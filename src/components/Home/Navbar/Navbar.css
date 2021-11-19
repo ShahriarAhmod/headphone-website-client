@@ -1,0 +1,9 @@
+.btn-logout{
+
+    color:white;
+    background-color: rgb(51, 54, 54);
+    border: none;
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-weight: 500;
+  }
