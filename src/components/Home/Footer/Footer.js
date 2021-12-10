@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <h6 className="pb-2">Copyright by Tech Hub</h6>
+            <h6 className="pb-2 text-light">Copyright <i class="far fa-copyright"></i> by Tech Hub</h6>
         </div>
     );
 };

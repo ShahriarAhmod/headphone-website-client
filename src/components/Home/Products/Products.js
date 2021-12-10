@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Zoom from 'react-reveal/Zoom';
 
 
 const Products = () => {
@@ -16,7 +17,9 @@ const Products = () => {
         <div className="mt-2 pt-5">
             <h2 className="fw-bold mt-5 pt-5 pb-3" style={{color: 'rgb(45, 45, 134)'}}>Our Most Demanding Headphone Collection</h2>
             <div className="container mt-4 mb-5 mt-5">
+                <Zoom bottom>
                 <div className="row ms-1">
+                
                     {  
                         products.map(product => <div key={product._id} className='col-sm-4 border'>
                             <div className="card border-white p-1">
@@ -30,7 +33,9 @@ const Products = () => {
                             </div>
                         </div>)
                     }
+                
                 </div>
+                </Zoom>
             </div>
         </div>
     );
