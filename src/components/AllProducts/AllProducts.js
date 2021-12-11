@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../Home/Footer/Footer';
 import Navbar from '../Home/Navbar/Navbar';
+import Zoom from 'react-reveal/Zoom';
 
 const AllProducts = () => {
     const [products, setProducts] = useState([])
@@ -22,7 +23,7 @@ const AllProducts = () => {
                     {
                         products.map(product => <div key={product._id} className='col-sm-6 border-bottom'>
                             <div className="card border-white p-5">
-                                <img className='rounded-top p-3' src={product.image} style={{ height: '400px' }} alt="" />
+                            <Zoom top><img className='rounded-top p-3' src={product.image} style={{ height: '400px' }} alt="" /> </Zoom>
                                 <div className="card-body">
                                     <h5 className="card-title fs-4 fw-bold">{product.title}</h5>
                                     <p className="card-text">{product.description}</p>
