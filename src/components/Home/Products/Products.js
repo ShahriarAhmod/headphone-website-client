@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Zoom from 'react-reveal/Zoom';
+import Flip from 'react-reveal/Flip';
 
 
 const Products = () => {
@@ -15,15 +16,15 @@ const Products = () => {
 
     return (
         <div className="mt-2 pt-5">
-            <h2 className="fw-bold mt-5 pt-5 pb-3" style={{color: 'rgb(45, 45, 134)'}}>Our Most Demanding Headphone Collection</h2>
+           <Flip left duration={1000} delay={600} > <h2 className="fw-bold mt-5 pt-5 pb-3" style={{color: 'rgb(45, 45, 134)'}}>Our Most Demanding Headphone Collection</h2> </Flip>
             <div className="container mt-4 mb-5 mt-5">
-                <Zoom bottom>
+                
                 <div className="row ms-1">
                 
                     {  
                         products.map(product => <div key={product._id} className='col-sm-4 border'>
                             <div className="card border-white p-1">
-                                <img className='img-fluid rounded-top p-4' src={product.image} style={{height:'370px'}} alt="" />
+                            <Zoom top><img className='img-fluid rounded-top p-4' src={product.image} style={{height:'370px'}} alt="" /> </Zoom>
                                 <div className="card-body">
                                     <h5 className="card-title text-decoration-none fw-bold">{product.title}</h5>
                                     <p className="card-text">{product.description}</p>
@@ -35,7 +36,7 @@ const Products = () => {
                     }
                 
                 </div>
-                </Zoom>
+                
             </div>
         </div>
     );

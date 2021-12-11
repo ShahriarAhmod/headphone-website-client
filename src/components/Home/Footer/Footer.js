@@ -1,8 +1,11 @@
 import React from 'react';
+import ScrollToTop from "react-scroll-to-top";
+
 
 const Footer = () => {
     return (
-        <div style={{ backgroundColor: 'rgb(82, 122, 122)' }}>
+        <div className="pb-3 " style={{ backgroundColor: 'rgb(82, 122, 122)' }}>
+            <ScrollToTop smooth="20" />
             <h2 className="pt-2 fw-bold" style={{ color: 'rgb(209, 224, 224)' }}>Tech hub</h2>
             <div className="d-flex align-items-center justify-content-evenly p-2">
                 <div classname="">
